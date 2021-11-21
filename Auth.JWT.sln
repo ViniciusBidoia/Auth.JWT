@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.JWT.API", "Auth.JWT.API\Auth.JWT.API.csproj", "{B43457D1-6A6A-4BE7-97F8-B201DAF039D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - API", "00 - API", "{719C0803-DE30-4C9D-B2B6-BC4287EC8780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "02 - Domain", "{AEED67AF-6ED2-4A79-AAFD-63323AAC71D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Application", "01 - Application", "{D5E51131-6B38-4B88-86E9-E778B2F52C85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Data", "03 - Data", "{59723285-EBDB-4727-B461-C71D5E81564B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Test", "04 - Test", "{AF30BE50-F602-4773-970F-4B4F48DE7856}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B43457D1-6A6A-4BE7-97F8-B201DAF039D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43457D1-6A6A-4BE7-97F8-B201DAF039D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43457D1-6A6A-4BE7-97F8-B201DAF039D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43457D1-6A6A-4BE7-97F8-B201DAF039D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B43457D1-6A6A-4BE7-97F8-B201DAF039D4} = {719C0803-DE30-4C9D-B2B6-BC4287EC8780}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16DBDBCD-02C9-4F8E-A58B-F6BB6F862DF9}
+	EndGlobalSection
+EndGlobal
