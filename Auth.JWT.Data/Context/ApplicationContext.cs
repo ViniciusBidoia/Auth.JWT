@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Auth.JWT.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Auth.JWT.Data.Context
         }
 
         #region [ DbSet's ]
-        //public DbSet<Model> NameModel { get; set };
+        public DbSet<Usuario> Usuario { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,6 +41,7 @@ namespace Auth.JWT.Data.Context
                 if (entry.State == EntityState.Added)
                 {
                     entry.Property("DataHoraRegistro").CurrentValue = DateTime.Now;
+                    entry.Property("Id").CurrentValue = Guid.NewGuid();
                 }
 
                 if (entry.State == EntityState.Modified)
