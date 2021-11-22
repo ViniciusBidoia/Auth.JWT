@@ -1,6 +1,5 @@
 using Auth.JWT.API.Configurations;
 
-
 //Antigo ConfigureServices
 #region Services
 var builder = WebApplication.CreateBuilder(args);
