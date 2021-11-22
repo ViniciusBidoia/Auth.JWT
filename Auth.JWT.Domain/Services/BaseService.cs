@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Auth.JWT.Domain.Services
 {
-    public class BaseService<TEntity> : IDisposable, IBaseService<TEntity> where TEntity : BaseEntity, new
+    public class BaseService<TEntity> : IDisposable, IBaseService<TEntity> where TEntity : BaseEntity, new()
     {
         private readonly IBaseRepository<TEntity> _repository;
 

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Auth.JWT.Application\Auth.JWT.Application.csproj" />
     <ProjectReference Include="..\Auth.JWT.Data\Auth.JWT.Data.csproj" />
   </ItemGroup>
 
