@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHealthChecks();
 builder.Services.AddSwaggerConfig();
 builder.Services.AddSqlCongiguration(builder.Configuration);
 builder.Services.AddDependenceInjectionConfig();
@@ -24,5 +25,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+app.UseHealthChecks(new PathString("/HealthCheck"));
 app.Run();
 #endregion

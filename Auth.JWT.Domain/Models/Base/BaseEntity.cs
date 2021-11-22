@@ -9,10 +9,10 @@ namespace Auth.JWT.Domain.Models.Base
 {
     public class BaseEntity
     {
-        protected BaseEntity()
-        {
-            Id = Guid.NewGuid();
-        }
+        //protected BaseEntity()
+        //{
+        //    Id = Guid.NewGuid();
+        //}
 
         [Column(name: "Id")]
         public Guid Id { get; set; }
