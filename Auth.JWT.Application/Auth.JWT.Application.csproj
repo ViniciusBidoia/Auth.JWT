@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Auth.JWT.Domain\Auth.JWT.Domain.csproj" />
   </ItemGroup>
 
 </Project>

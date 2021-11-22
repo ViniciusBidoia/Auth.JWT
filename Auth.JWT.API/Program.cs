@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerConfig();
 builder.Services.AddSqlCongiguration(builder.Configuration);
+builder.Services.AddDependenceInjectionConfig();
 #endregion
 
 //Antigo Configure
