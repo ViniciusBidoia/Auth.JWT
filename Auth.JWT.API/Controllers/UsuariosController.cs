@@ -89,23 +89,22 @@ namespace Auth.JWT.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<UsuarioViewModel>> Delete(Guid id)
-        {
-            UsuarioViewModel usuario;
+        public async Task<ActionResult<bool>> Delete(Guid id)
+        {            
             try
             {
-                usuario = _mapper.Map<UsuarioViewModel>(await _usuarioAppService.ObterPorId(id));
+                var usuario = _mapper.Map<UsuarioViewModel>(await _usuarioAppService.ObterPorId(id));
                 if (usuario == null)
                     return NoContent();
                 
-                await _usuarioAppService.Remover(id);
+                await _usuarioAppService.Remover(usuario.Id);
             }
             catch (Exception ex)
             {
                 _log.LogError("Error --> UsuariosController.Delete(id)", ex);
                 throw;
             }
-            return Ok(usuario);
+            return Ok(true);
         }
     }
 }

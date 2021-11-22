@@ -8,7 +8,8 @@ namespace Auth.JWT.API.Configurations
         public static IServiceCollection AddSqlCongiguration(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+                       .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
             return services;
         }

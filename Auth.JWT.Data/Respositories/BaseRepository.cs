@@ -23,8 +23,8 @@ namespace Auth.JWT.Data.Respositories
         }
 
         public virtual async Task Adicionar(TEntity entity)
-        {
-            _entity.Add(entity);
+        {            
+            await _entity.AddAsync(entity);
             await SaveChanges();
         }
 
