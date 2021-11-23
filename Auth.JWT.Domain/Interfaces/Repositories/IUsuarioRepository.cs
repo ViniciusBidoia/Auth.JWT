@@ -9,5 +9,6 @@ namespace Auth.JWT.Domain.Interfaces.Repositories
 {
     public interface IUsuarioRepository : IBaseRepository<Usuario>
     {
+        Usuario Get(string username, string password);
     }
 }

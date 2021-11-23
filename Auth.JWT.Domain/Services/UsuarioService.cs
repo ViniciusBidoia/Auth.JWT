@@ -18,5 +18,10 @@ namespace Auth.JWT.Domain.Services
         {
             _repository = repository;
         }
+
+        public Usuario Get(string username, string password)
+        {
+            return _repository.Get(username, password);
+        }
     }
 }

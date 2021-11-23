@@ -9,5 +9,8 @@ namespace Auth.JWT.Application.Interfaces
 {
     public interface IUsuarioAppService : IBaseAppService<Usuario>
     {
+        Usuario Get(string username, string password);
+
+        bool ValidUser(Usuario usuario);
     }
 }

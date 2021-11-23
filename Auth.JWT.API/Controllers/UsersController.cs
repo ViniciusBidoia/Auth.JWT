@@ -8,15 +8,15 @@ namespace Auth.JWT.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly IMapper _mapper;
-        private readonly ILogger<UsuariosController> _log;
+        private readonly ILogger<UsersController> _log;
         private readonly IConfiguration _config;
         private readonly IUsuarioAppService _usuarioAppService;
 
-        public UsuariosController(IMapper mapper,
-                                  ILogger<UsuariosController> log,
+        public UsersController(IMapper mapper,
+                                  ILogger<UsersController> log,
                                   IConfiguration config,
                                   IUsuarioAppService usuarioAppService)
         {

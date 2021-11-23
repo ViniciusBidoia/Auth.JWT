@@ -9,5 +9,6 @@ namespace Auth.JWT.Domain.Interfaces.Services
 {
     public interface IUsuarioService : IBaseService<Usuario>
     {
+        Usuario Get(string username, string password);
     }
 }
