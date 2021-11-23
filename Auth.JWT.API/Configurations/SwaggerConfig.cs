@@ -25,6 +25,32 @@ namespace Auth.JWT.API.Configurations
                         Url = new Uri("https://example.com/license")
                     }
                 });
+
+                // Bearer token authentication
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Bearer",
+                    Description = "Please insert JWT with Bearer into field",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "bearer"
+                });
+
+                // Make sure swagger UI requires a Bearer token specified
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme,
+                            }
+                        },
+                        new string[] { }
+                    }
+                });
             });
 
             return services;

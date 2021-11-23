@@ -22,8 +22,8 @@ namespace Auth.JWT.API.Util
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, usuario.Username.ToString()),
-                    new Claim(ClaimTypes.Role, "Admin"/*usuario.Role.ToString()*/)
+                    new Claim(ClaimTypes.Name, usuario.Username),
+                    new Claim(ClaimTypes.Role, "employee"/*usuario.Role.ToString()*/)
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(20),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
