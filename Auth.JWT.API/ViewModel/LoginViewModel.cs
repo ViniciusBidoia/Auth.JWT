@@ -8,9 +8,7 @@ namespace Auth.JWT.API.ViewModel
         [Required]
         public string Username { get; set; }
 
-        [EmailAddress]
-        public string Email { get; set; }
-
+        [Required]
         [PasswordPropertyText]
         public string Password { get; set; }
     }

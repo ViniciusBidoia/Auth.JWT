@@ -63,21 +63,14 @@ namespace Auth.JWT.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<LoginViewModel>> Post([FromBody] LoginViewModel login)
+        public async Task<ActionResult<UsuarioViewModel>> Post([FromBody] UsuarioViewModel usuario)
         {
             try
             {
                 if (!ModelState.IsValid)
-                    return NotFound(login);
+                    return NotFound(usuario);
 
-                Usuario usuario = new Usuario()
-                {
-                    Username = login.Username,
-                    Email = login.Email,
-                    Password = login.Password
-                };
-
-                await _usuarioAppService.Adicionar(usuario);
+                await _usuarioAppService.Adicionar(_mapper.Map<Usuario>(usuario));
 
             }
             catch (Exception ex)
@@ -85,7 +78,7 @@ namespace Auth.JWT.API.Controllers
                 _log.LogError("Error --> UsuariosController.Post(id)", ex);
                 throw;
             }
-            return Ok(login);
+            return Ok();
         }
 
         [HttpDelete("{id}")]

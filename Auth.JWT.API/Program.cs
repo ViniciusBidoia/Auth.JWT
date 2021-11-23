@@ -10,6 +10,7 @@ builder.Services.AddHealthChecks();
 builder.Services.AddSwaggerConfig();
 builder.Services.AddSqlCongiguration(builder.Configuration);
 builder.Services.AddDependenceInjectionConfig();
+builder.Services.AddAuthenticationConfig(builder.Configuration);
 #endregion
 
 //Antigo Configure
@@ -24,6 +25,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
+app.UseAuthentication();
 app.MapControllers();
 app.UseHealthChecks(new PathString("/HealthCheck"));
 app.Run();
