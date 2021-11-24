@@ -26,7 +26,7 @@ Ao iniciar a aplicação, a pagina do swagger será inicializada.
 Como seu banco é novo, temos que incluir um usuario no banco para que podemos pegar a autenticação do mesmo.
 
 Rode o seguinte comando.
-```bash
+```sql
 insert Usuario 
 (Id, Username, Email, Password, DataHoraRegistro)
 values 
@@ -37,7 +37,7 @@ values
 Realizar o request do metodo Autentications conforme imagem e codigo abaixo
 ![image](https://user-images.githubusercontent.com/47647813/143150504-37df73b0-4a7b-42e3-a8ea-93181b526aaa.png)
 
-```bash
+```json
 {
   "username": "usuario",
   "password": "ursinho"
@@ -45,7 +45,7 @@ Realizar o request do metodo Autentications conforme imagem e codigo abaixo
 ```
 
 O response do metodo será o retorno do usuario logado e o seu token. Conforme Exemplo.
-```bash
+```json
 {
   "usuario": {
     "username": "Usuario",
