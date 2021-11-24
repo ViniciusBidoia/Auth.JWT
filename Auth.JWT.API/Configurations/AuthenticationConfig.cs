@@ -13,12 +13,16 @@ namespace Auth.JWT.API.Configurations
                     {
                         //options.RequireHttpsMetadata = false;
                         //options.SaveToken = true;
+                        //options.Audience = configuration.GetSection("Jwt:Audience").Value;                              
                         options.TokenValidationParameters = new TokenValidationParameters
                         {
-                            ValidateIssuerSigningKey = true,
                             ValidateIssuer = false,
                             ValidateAudience = false,
                             ValidateLifetime = true,
+                            ValidateIssuerSigningKey = true,
+                            ClockSkew = TimeSpan.Zero,
+                            //ValidAudience = configuration.GetSection("Tokens:Audience").Value,
+                            //ValidIssuer = configuration.GetSection("Tokens:Issuer").Value,
                             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("Jwt:Key").Value))
                         };
                     });

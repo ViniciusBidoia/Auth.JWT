@@ -11,8 +11,8 @@ namespace Auth.JWT.API.Configurations
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "API Auth - .Net 6",
-                    Description = "API utilizando autenticacao JWT com a nova versao do .Net Core 6",
+                    Title = "API Auth JWT with .Net 6",
+                    Description = "API utilizando autenticação JWT com a nova versao do .Net Core 6",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {

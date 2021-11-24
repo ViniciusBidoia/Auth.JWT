@@ -22,10 +22,12 @@ namespace Auth.JWT.API.Util
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, usuario.Username),
+                    new Claim(ClaimTypes.Name, usuario.Username),                    
                     new Claim(ClaimTypes.Role, "employee"/*usuario.Role.ToString()*/)
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(20),
+                Issuer = builder.Configuration.GetSection("Jwt:Issuer").Value,
+                Audience = builder.Configuration.GetSection("Jwt:Audience").Value,
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
