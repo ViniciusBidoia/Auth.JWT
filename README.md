@@ -1,6 +1,6 @@
 # Auth.JWT
 
-Projeto em ASP.Net core 6 Web API Utilizando o Visual Studio 2022
+Projeto em NET Core 6.0 Web API Rest + Automapper + Swagger + DDD + DI + JWT + SQL MSSQL + Boas praticas. Utilizando o Visual Studio 2022
 
 Realizando teste com a autenticação em JWT.
 
